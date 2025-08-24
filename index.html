@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio Criativo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Meus Projetos</h1>
+    <p>Portfólio criativo com animações simples</p>
+  </header>
+  
+  <main id="projects"></main>
+
+  <script src="projects.js"></script>
+  <script>
+    const container = document.getElementById("projects");
+    projects.forEach((p, i) => {
+      container.innerHTML += `
+        <div class="card" style="animation-delay:${i * 0.2}s">
+          <img src="${p.img}" alt="${p.name}">
+          <h2>${p.name}</h2>
+          <p>${p.desc}</p>
+          <a href="${p.link}" target="_blank">Ver Projeto</a>
+        </div>`;
+    });
+  </script>
+</body>
+</html>
